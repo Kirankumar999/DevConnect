@@ -1,52 +1,79 @@
 const express = require('express');
-
 const app = express();
+const connectDB = require('./config/database');
 
-app.get("/users", (req, res, next) => {
-    res.send("Users Page");
-}, (req, res) => {
-    
+const User = require('./models/user');
+
+app.use(express.json());
+
+app.post("/signup", async (req, res) => {
+    console.log(req.body);
+    const userOBJ = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        password: req.body.password,
+        phoneNumber: req.body.phoneNumber,
+        emailId: req.body.emailId
+    };
+    const user = new User(userOBJ);
+    await user.save();
+    res.send("User created successfully");
 });
 
-app.use("/", (req, res) => {
-    res.send("Dashboard");
-});
-// User Routes - GET, POST, PUT, DELETE, PATCH
-
-// GET /user/:id - get user by id
-app.get("/user/:id", (req, res) => {
-    const userId = req.params.id;
-    // Dummy response, replace with DB access as needed
-    res.send(`Getting user with ID: ${userId}`);
+app.get("/user/:id", async (req, res) => {
+    const user = await User.findById(req.params.id);
+    res.send(user);
 });
 
-// POST /user - create a new user
-app.post("/user", (req, res) => {
-    // Normally, you'd access req.body for posted data
-    res.send("User created (dummy response)");
+app.delete("/user/:id", async (req, res) => {
+    try {
+        const user = await User.findByIdAndDelete(req.params.id);
+        res.send(user);
+    } catch (error) {
+        res.status(500).json({ message: "Error deleting user" });
+    }
+    res.send(user);
 });
 
-// PUT /user/:id - update user fully
-app.put("/user/:id", (req, res) => {
-    const userId = req.params.id;
-    // Normally, you'd update user data in DB here
-    res.send(`Full update for user with ID: ${userId}`);
+app.get("user", async (req, res) => {
+    try {
+    const users = await User.findOne({ emailId: req.body.emailId });
+    if (!users) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        res.send(users);
+    } catch (error) {
+        res.status(500).json({ message: "Error finding user" });
+    }
 });
 
-// PATCH /user/:id - update user partially
-app.patch("/user/:id", (req, res) => {
-    const userId = req.params.id;
-    // Normally, you'd update parts of the user in DB here
-    res.send(`Partial update for user with ID: ${userId}`);
+app.patch("/user/:id", async (req, res) => {
+    const userId = req.body.userId;
+    try {
+        const user = await User.findByIdAndUpdate(userId, req.body);
+        res.send(user);
+    } catch (error) {
+        res.status(500).json({ message: "Error updating user" });
+    }
 });
 
-// DELETE /user/:id - delete a user
-app.delete("/user/:id", (req, res) => {
-    const userId = req.params.id;
-    // Normally, you'd delete the user from DB here
-    res.send(`Deleted user with ID: ${userId}`);
+app.put("/user/:id", async (req, res) => {
+    const userId = req.body.userId;
+    try {
+        const user = await User.findByIdAndUpdate(userId, req.body);
+        res.send(user);
+    } catch (error) {
+        res.status(500).json({ message: "Error updating user" });
+    }
 });
 
-app.listen(3800, ()=> {
-    console.log("Server Started and listening to port 3800");
+connectDB().then(() => {
+    console.log("Connected to MongoDB");
+    app.listen(3000, () => {
+        console.log("Server is running on port 3000");
+    });
+}).catch((err) => {
+    console.log("Error connecting to MongoDB");
+    console.error(err);
 });
+
