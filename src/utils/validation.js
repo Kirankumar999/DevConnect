@@ -13,4 +13,15 @@ const validateSignUpRequest = (req) => {
     }
 };
 
+validateProfileEditRequest = (req) => {
+
+    const allowedEditFields = ['age', 'gender', 'bio', 'skills', 'profilePicture', 'phoneNumber'];
+    const editFields = Object.keys(req.body);
+    const invalidFields = editFields.filter(field => !allowedEditFields.includes(field));
+    if (invalidFields.length > 0) {
+        throw new Error(`Invalid fields: ${invalidFields.join(', ')}`);
+    }
+    return true;
+};
+
 module.exports = validateSignUpRequest;
