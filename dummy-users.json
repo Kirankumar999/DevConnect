@@ -1,0 +1,305 @@
+[
+  {
+    "firstName": "Casy",
+    "lastName": "Breth",
+    "emailId": "Casy.Breth@gmail.com",
+    "password": "Casy@999"
+  },
+  
+  {
+    "firstName": "Alex",
+    "lastName": "Martinez",
+    "emailId": "alex.martinez@devconnect.com",
+    "password": "Alex@Dev2024!",
+    "comment": "Alex sent connection request to Sarah"
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Chen",
+    "emailId": "sarah.chen@techmail.com",
+    "password": "Sarah#Tech99"
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Thompson",
+    "emailId": "michael.thompson@codebase.io",
+    "password": "Mike@Code2024"
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Rodriguez",
+    "emailId": "emily.rodriguez@devmail.com",
+    "password": "Emily$Dev123"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Wilson",
+    "emailId": "james.wilson@programmer.net",
+    "password": "James!Prog99"
+  },
+  {
+    "firstName": "Priya",
+    "lastName": "Patel",
+    "emailId": "priya.patel@devconnect.com",
+    "password": "Priya@Dev2024"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Kim",
+    "emailId": "david.kim@techstack.io",
+    "password": "David#Stack99"
+  },
+  {
+    "firstName": "Jessica",
+    "lastName": "Anderson",
+    "emailId": "jessica.anderson@codehub.com",
+    "password": "Jessica$Code123"
+  },
+  {
+    "firstName": "Ryan",
+    "lastName": "O'Connor",
+    "emailId": "ryan.oconnor@devmail.com",
+    "password": "Ryan@Dev2024!"
+  },
+  {
+    "firstName": "Sophia",
+    "lastName": "Lee",
+    "emailId": "sophia.lee@techmail.com",
+    "password": "Sophia#Tech99"
+  },
+  {
+    "firstName": "Daniel",
+    "lastName": "Brown",
+    "emailId": "daniel.brown@programmer.net",
+    "password": "Daniel!Prog123"
+  },
+  {
+    "firstName": "Olivia",
+    "lastName": "Taylor",
+    "emailId": "olivia.taylor@codebase.io",
+    "password": "Olivia@Code2024"
+  },
+  {
+    "firstName": "Christopher",
+    "lastName": "Garcia",
+    "emailId": "chris.garcia@devconnect.com",
+    "password": "Chris$Dev99"
+  },
+  {
+    "firstName": "Ava",
+    "lastName": "Johnson",
+    "emailId": "ava.johnson@techstack.io",
+    "password": "Ava#Stack2024"
+  },
+  {
+    "firstName": "Matthew",
+    "lastName": "Davis",
+    "emailId": "matthew.davis@codehub.com",
+    "password": "Matt!Code99"
+  },
+  {
+    "firstName": "Isabella",
+    "lastName": "White",
+    "emailId": "isabella.white@devmail.com",
+    "password": "Isabella@Dev123"
+  },
+  {
+    "firstName": "Andrew",
+    "lastName": "Harris",
+    "emailId": "andrew.harris@techmail.com",
+    "password": "Andrew#Tech2024"
+  },
+  {
+    "firstName": "Mia",
+    "lastName": "Clark",
+    "emailId": "mia.clark@programmer.net",
+    "password": "Mia$Prog99"
+  },
+  {
+    "firstName": "Benjamin",
+    "lastName": "Lewis",
+    "emailId": "benjamin.lewis@codebase.io",
+    "password": "Ben!Base123"
+  },
+  {
+    "firstName": "Charlotte",
+    "lastName": "Walker",
+    "emailId": "charlotte.walker@devconnect.com",
+    "password": "Charlotte@Dev2024"
+  },
+  {
+    "firstName": "William",
+    "lastName": "Hall",
+    "emailId": "william.hall@techstack.io",
+    "password": "Will#Stack99"
+  },
+  {
+    "firstName": "Amelia",
+    "lastName": "Allen",
+    "emailId": "amelia.allen@codehub.com",
+    "password": "Amelia$Hub123"
+  },
+  {
+    "firstName": "Ethan",
+    "lastName": "Young",
+    "emailId": "ethan.young@devmail.com",
+    "password": "Ethan@Dev2024!"
+  },
+  {
+    "firstName": "Harper",
+    "lastName": "King",
+    "emailId": "harper.king@techmail.com",
+    "password": "Harper#Tech99"
+  },
+  {
+    "firstName": "Lucas",
+    "lastName": "Wright",
+    "emailId": "lucas.wright@programmer.net",
+    "password": "Lucas!Prog2024"
+  },
+  {
+    "firstName": "Evelyn",
+    "lastName": "Lopez",
+    "emailId": "evelyn.lopez@codebase.io",
+    "password": "Evelyn@Base123"
+  },
+  {
+    "firstName": "Alexander",
+    "lastName": "Hill",
+    "emailId": "alexander.hill@devconnect.com",
+    "password": "Alex$Dev99"
+  },
+  {
+    "firstName": "Abigail",
+    "lastName": "Scott",
+    "emailId": "abigail.scott@techstack.io",
+    "password": "Abigail#Stack2024"
+  },
+  {
+    "firstName": "Mason",
+    "lastName": "Green",
+    "emailId": "mason.green@codehub.com",
+    "password": "Mason!Hub99"
+  },
+  {
+    "firstName": "Liam",
+    "lastName": "Adams",
+    "emailId": "liam.adams@devconnect.com",
+    "password": "Liam@Dev2024!"
+  },
+  {
+    "firstName": "Grace",
+    "lastName": "Baker",
+    "emailId": "grace.baker@techmail.com",
+    "password": "Grace#Tech99"
+  },
+  {
+    "firstName": "Noah",
+    "lastName": "Nelson",
+    "emailId": "noah.nelson@codebase.io",
+    "password": "Noah$Base123"
+  },
+  {
+    "firstName": "Lily",
+    "lastName": "Carter",
+    "emailId": "lily.carter@devmail.com",
+    "password": "Lily@Dev2024"
+  },
+  {
+    "firstName": "Logan",
+    "lastName": "Mitchell",
+    "emailId": "logan.mitchell@programmer.net",
+    "password": "Logan!Prog99"
+  },
+  {
+    "firstName": "Zoe",
+    "lastName": "Perez",
+    "emailId": "zoe.perez@techstack.io",
+    "password": "Zoe#Stack2024"
+  },
+  {
+    "firstName": "Jackson",
+    "lastName": "Roberts",
+    "emailId": "jackson.roberts@codehub.com",
+    "password": "Jackson$Hub123"
+  },
+  {
+    "firstName": "Chloe",
+    "lastName": "Turner",
+    "emailId": "chloe.turner@devconnect.com",
+    "password": "Chloe@Dev99"
+  },
+  {
+    "firstName": "Aiden",
+    "lastName": "Phillips",
+    "emailId": "aiden.phillips@techmail.com",
+    "password": "Aiden#Tech2024"
+  },
+  {
+    "firstName": "Madison",
+    "lastName": "Campbell",
+    "emailId": "madison.campbell@codebase.io",
+    "password": "Madison$Base99"
+  },
+  {
+    "firstName": "Carter",
+    "lastName": "Parker",
+    "emailId": "carter.parker@devmail.com",
+    "password": "Carter@Dev123"
+  },
+  {
+    "firstName": "Riley",
+    "lastName": "Evans",
+    "emailId": "riley.evans@programmer.net",
+    "password": "Riley!Prog2024"
+  },
+  {
+    "firstName": "Layla",
+    "lastName": "Edwards",
+    "emailId": "layla.edwards@techstack.io",
+    "password": "Layla#Stack99"
+  },
+  {
+    "firstName": "Owen",
+    "lastName": "Collins",
+    "emailId": "owen.collins@codehub.com",
+    "password": "Owen$Hub2024"
+  },
+  {
+    "firstName": "Nora",
+    "lastName": "Stewart",
+    "emailId": "nora.stewart@devconnect.com",
+    "password": "Nora@Dev2024!"
+  },
+  {
+    "firstName": "Wyatt",
+    "lastName": "Sanchez",
+    "emailId": "wyatt.sanchez@techmail.com",
+    "password": "Wyatt#Tech123"
+  },
+  {
+    "firstName": "Aria",
+    "lastName": "Morris",
+    "emailId": "aria.morris@codebase.io",
+    "password": "Aria$Base2024"
+  },
+  {
+    "firstName": "Henry",
+    "lastName": "Rogers",
+    "emailId": "henry.rogers@devmail.com",
+    "password": "Henry@Dev99"
+  },
+  {
+    "firstName": "Scarlett",
+    "lastName": "Reed",
+    "emailId": "scarlett.reed@programmer.net",
+    "password": "Scarlett!Prog123"
+  },
+  {
+    "firstName": "Sebastian",
+    "lastName": "Cook",
+    "emailId": "sebastian.cook@techstack.io",
+    "password": "Seb#Stack2024"
+  }
+]
+

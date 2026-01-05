@@ -3,6 +3,10 @@ const requestRouter = express.Router();
 const { userAuth } = require('../middleWares/auth');
 const ConnectionRequest = require('../models/connectionRequest');
 const User = require('../models/user');
+
+// Send a connection request
+// Status can be interested or ignored
+// ToUserId is the id of the user to send the connection request to
 requestRouter.post("/request/send/:status/:toUserId", userAuth, async (req, res) => {
     try {
         const fromUserId = req.user._id;
@@ -35,7 +39,7 @@ requestRouter.post("/request/send/:status/:toUserId", userAuth, async (req, res)
         });
         await connectionRequest.save();
         res.status(200).json({
-            message: req.user.firstName + "is" + req.user.status + "in" + req.user.lastName, 
+            message: req.user.firstName + "  is  " + status + "  in " + "Lucy's" + "Profile", 
             connectionRequest: connectionRequest
         });
     } catch (error) {
@@ -43,19 +47,33 @@ requestRouter.post("/request/send/:status/:toUserId", userAuth, async (req, res)
     }
 });
 
-requestRouter.post("/request/send/ignored/:userID", userAuth, async (req, res) => {
+// Review a connection request
+// Status can be accepted or rejected
+// RequestId is the id of the connection request
+requestRouter.post("/request/review/:status/:requestId", userAuth, async (req, res) => {
     try {
+        
         const user = req.user;
-        const { userID } = req.params;
-    } catch (error) {
-        res.status(500).json({ message: "Error sending ignored request", error: error.message });
-    }
-});
-
-requestRouter.post("/request/review/accepted/:requestId", userAuth, async (req, res) => {
-    try {
-        const user = req.user;
-        const { requestId } = req.params;
+        const { status, requestId } = req.params;
+        const allowedStatuses = ['accepted', 'rejected'];
+        if (!allowedStatuses.includes(status)) {
+            return res.status(400).json({ message: "Invalid status" });
+        }
+        const connectionRequest = await ConnectionRequest.findById({
+            _id: requestId,
+            toUserId: user._id,
+            status: 'interested',
+        });
+        if (!connectionRequest) {   
+            return res.status(400).json({ message: "Connection request not found" });
+        }
+        if (connectionRequest.toUserId.toString() !== user._id.toString()) {
+            return res.status(400).json({ message: "You are not authorized to review this connection request" });
+        }
+        
+        connectionRequest.status = status;
+        await connectionRequest.save();
+        res.status(200).json({ message: "Connection request reviewed successfully", connectionRequest: connectionRequest });
     } catch (error) {
         res.status(500).json({ message: "Error reviewing accepted request", error: error.message });
     }

@@ -4,10 +4,12 @@ const connectionRequestSchema = new mongoose.Schema({
     fromUserId: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
+        ref: 'User',
     },
     toUserId: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
+        ref: 'User',
     },
     status: {
         type: String,
@@ -23,13 +25,13 @@ const connectionRequestSchema = new mongoose.Schema({
 
 connectionRequestSchema.index({ fromUserId: 1, toUserId: 1 });
 
-connectionRequestSchema.pre('save', function(next) {
-    const connectionRequest = this;
-    if (connectionRequest.fromUserId.toString() === connectionRequest.toUserId.toString()) {
-        throw new Error('You cannot send a connection request to yourself - Coming from the pre save hook');
-    }
-    next();
-});
+// connectionRequestSchema.pre('save', function(next) {
+//     const connectionRequest = this;
+//     if (connectionRequest.fromUserId.toString() === connectionRequest.toUserId.toString()) {
+//         throw new Error('You cannot send a connection request to yourself - Coming from the pre save hook');
+//     }
+//     next();
+// });
 
 const ConnectionRequest = mongoose.model('ConnectionRequest', connectionRequestSchema);   
 module.exports = ConnectionRequest;
